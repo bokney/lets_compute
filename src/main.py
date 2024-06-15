@@ -1,16 +1,23 @@
-register = [[1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1]]
+
+from src.registers import create_register
+
+# register = [[1, 1, 1, 1, 1, 1, 1, 1],
+#             [1, 1, 1, 1, 1, 1, 1, 1],
+#             [1, 1, 1, 1, 1, 1, 1, 1],
+#             [1, 1, 1, 1, 1, 1, 1, 1]]
+
+# register = {'register': [], }
 
 REGISTER_SIZE = 8
-REGISTER_AMOUNT = 4
+REGISTER = []
+REGISTER = REGISTER.append(create_register(REGISTER_SIZE))
 
-def clear_registers():
-    for x in range(REGISTER_AMOUNT):
-        for y in range(REGISTER_SIZE):
-            register[x][y] = 0
+def do_something():
+    print(f'doing something... {REGISTER})
+    pass
 
-clear_registers()
-print(register)
+do_something()
+
+# clear_registers()
+# print(register)
 
